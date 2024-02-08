@@ -1,5 +1,54 @@
-body {
-  background-color: pink;
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&display=swap');
+
+body,
+html {
+  background-color: white;
   margin: 0;
   padding: 0;
+
+}
+
+:root {
+  --primary-color: #122223;
+  --secondary-color: #F6F2F2;
+  --tertiary-color: #81B59F;
+  --accent-color: #F2FEDC;
+  --attention-color: #E03D5A;
+  --neutral-color: #F0C7B9;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: var(--secondary-color);
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.logo {
+  color: var(--primary-color);
+  font-size: 1.9em;
+  font-family: 'Bodoni Moda', serif;
+  letter-spacing: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navbar .navigation .menu {
+  transition: 0.6s ease;
+  background-color: var(--tertiary-color);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+}
+
+.navbar .navigation .menu.active {
+  right: 0;
+}
+
+.navbar .navigation .menu.hidden {
+  right: -120%;
 }
